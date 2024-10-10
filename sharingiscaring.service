@@ -1,0 +1,19 @@
+[Unit]
+Description=A simple file sharing service.
+#Service requires network to run, line ensures service starts after networking.
+After=network.target
+
+[Service]
+#Designates what file to run when service starts
+ExecStart=/home/sysadmin/Sharing/server.sh
+#Ensures that the file listed above will restart if its process is killed.
+Restart=always
+#Where does this service do its work, where would any output from the file listed above go.
+WorkingDirectory=/home/sysadmin/Sharing/
+#Run the file as though you were the following user.
+User=root
+Group=root
+
+[Install]
+#Allows the service to be enabled and run at system start.
+WantedBy=multi-user.target

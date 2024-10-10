@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 -m http.server -d /home/sysadmin/Documents/Sharing/
+python3 -m http.server -d /home/sysadmin/Documents/Share/

@@ -5,7 +5,7 @@ After=network.target
 
 [Service]
 #Designates what file to run when service starts
-ExecStart=/home/sysadmin/Documents/Share/server.sh
+ExecStart=/etc/SharingIsCaring/server.sh
 #Ensures that the file listed above will restart if its process is killed.
 Restart=always
 #Where does this service do its work, where would any output from the file listed above go.
